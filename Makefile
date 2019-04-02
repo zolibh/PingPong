@@ -2,8 +2,10 @@
 
 .DEFAULT_GOAL := build
 
-GOOS ?= $(call lc, $(shell uname -s))
-GOARCH ?= amd64
+#GOOS ?= $(call lc, $(shell uname -s))
+GOOS = linux 
+GOARCH = amd64
+GOARM = 7 
 
 SOURCES = $(wildcard */main.go)
 PROJECTS = $(foreach p, $(dir $(SOURCES)), $(p:/=))
