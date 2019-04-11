@@ -1,4 +1,7 @@
-# SRE Recruitment Assignment
+To Run :
+from the clones Folder :
+
+>  docker-compose up --build
 
 ---
 
@@ -54,7 +57,7 @@ The ponger service can be provided with a certificate path in its configuration 
     tlsPrivateKey: /path/to/private_key
 ```
 
-For the purposes of this assignment, we do not require a CA-signed certificate, a self-signed certificate that you generate on your machine will do. However, the pinger service needs to be instructed to accept the self-signed certificate. The pinger service can be provided with a certificate to accept as valid:
+We do not require a CA-signed certificate, a self-signed certificate that you generate on your machine will do. However, the pinger service needs to be instructed to accept the self-signed certificate. The pinger service can be provided with a certificate to accept as valid:
 ```yaml
 ---
   ponger:
@@ -62,17 +65,4 @@ For the purposes of this assignment, we do not require a CA-signed certificate, 
     acceptCert: /path/to/cert
 ```
 
-Modify the containerised applications and the deployment code in order for the services to communicate over HTTPS.
-You can provide us with the same items as for part 1, including the modifications you made to achieve encrypted communication.
 
-## Considerations
-
-1. We would prefer a working assignment over a perfectly implemented one. If it's not straight-forward how to run your solution, please provide us a guide on what we need to do to run it.
-2. For things you acknowledge that could have been better or you would have liked to do but didn't find the time, please put them in a guide for us to read!
-
-
-## Time
-We haven’t set a time limit for this test. We want you to spend the time you need to hand something in that you’re happy with - at the same time we don’t want you to spend hours on end either. As a guideline, our engineers here take around 2 to 3 hours on average to get the job done cleanly.
-
-## Submitting
-Email an archive of your project to ​tech.test@starlingbank.com​ or share a private git repo (Git and BitBucket are free) with us - ideally we’d like to avoid lots of public solutions
