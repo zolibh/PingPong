@@ -1,0 +1,8 @@
+FROM ubuntu
+MAINTAINER Zoli Bharmal
+COPY ponger/ponger/ponger /app/
+COPY ponger/config.yaml /app/
+COPY certs /app/certs/
+WORKDIR /app
+USER root
+CMD  ["./ponger","-c", "config.yaml"]

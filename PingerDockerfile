@@ -1,0 +1,8 @@
+FROM ubuntu
+MAINTAINER Zoli Bharmal
+COPY pinger/pinger/pinger /app/
+COPY pinger/config.yaml /app/
+COPY certs/ /app/certs/
+WORKDIR /app
+USER root
+CMD  ["./pinger","-c", "config.yaml"]

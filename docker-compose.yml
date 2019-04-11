@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ponger:
+    build: 
+      context: .
+      dockerfile: PongerDockerfile
+
+  pinger:
+    build:  
+      context: .
+      dockerfile: PingerDockerfile
