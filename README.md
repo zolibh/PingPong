@@ -65,4 +65,10 @@ We do not require a CA-signed certificate, a self-signed certificate that you ge
     acceptCert: /path/to/cert
 ```
 
+To build a standard docker image not using the default "DockerFile"
 
+	docker build -f PingerDockerfile . --no-cache
+
+To use docker compose, which will use the docker-compose.yml
+
+  docker-compose up --build
